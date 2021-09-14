@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
+    margin: 0 60px;
+    padding: 20px;
 }
 
 hr {
@@ -68,30 +76,41 @@ h4, h6 {
 
 /* ------------------------------nav buttons-----------------------------------------------*/
 
+.navButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logIn {
-    background-color: red;
+    background-color:#D80000;
     border-radius: 25px;
     width: 80px;
     height: 20px;
     border: none;
     color: white;
     padding: 15px;
-    text-align: center;
+    margin-right: 10px;
 }
 
 .signUp {
-    background-color: #D3D3D3;
+    background-color:#E8E8E8;
     border-radius: 25px;
     width: 80px;
     height: 20px;
     border: none;
     color: black;
     padding: 15px;
+    margin-right: 10px;
 }
 
 .dropDown {
     background-color: transparent;
     border-radius: 50%;
+    border: 1px solid #E8E8E8;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
 }
 
 /*---------------------------------main content-------------------------------------*/
@@ -115,7 +134,7 @@ main {
 }
 
 .subTitle {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 100;
     margin: 0;
 }
@@ -155,17 +174,23 @@ main {
 }
 
 .serving {
-    background-color: #D3D3D3;
+    background-color: #E8E8E8;
     border-radius: 25px;
     font-size: 15px;
     padding: 8px;
+    color: grey;
 }
 
 ul li {
     list-style: none;
 }
 
+ul {
+    padding-inline-start: 0;
+}
+
 .directions {
+    background-color: #D3D3D3;
     border-radius: 25px;
     width: 80px;
     height: 20px;
@@ -175,7 +200,7 @@ ul li {
 }
 
 .save {
-    background-color: red;
+    background-color:#D80000;
     border-radius: 25px;
     width: 80px;
     height: 20px;
@@ -184,5 +209,120 @@ ul li {
     padding: 15px;
 }
 
-/*------------------------------------template1-------------------------------------*/
+/*------------------------------------section-------------------------------------*/
 
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.fromEpi {
+    text-align: center;
+    margin: 4em 0 2em 0;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.bold {
+    font-size: 30px;
+}
+
+.tempBox {
+    max-width: 26%;
+    margin-bottom: 4em;
+}
+
+.imgOverlay {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    background: black;
+    opacity: 0.5;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+}
+
+.overlayText {
+    color: white;
+    font-size: 30px;
+    padding: 10px 30px 30px 30px;
+}
+
+.imgTextGrid {
+    display: grid;
+    grid-template-rows: 30px 30px;
+    grid-template-columns: 1fr 50px;
+}
+
+.name {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.sixtyEight {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    text-align: end;
+    margin-top: 10px;
+}
+
+.num {
+    border: 1px solid grey;
+    padding-right: 12px;
+}
+
+.midSec {
+    text-align: center;
+    margin: 2em 0;
+    font-size: 25px
+}
+
+.flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+/*-------------------------------footer--------------------------------------------*/
+
+footer {
+    background-color: #DCDCDC;
+    height: 500px;
+    padding-top: 150px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-column-gap: 50px;
+    height: 300px;
+    margin: 0 150px 0 150px;
+}
+
+.footerList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.listOne li, .listTwo li, .listThree li, .listFour li {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.apple {
+    width: 150px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.copyright {
+    color: 	#808080;
+}
+
+aside {
+    text-align: center;
+}
