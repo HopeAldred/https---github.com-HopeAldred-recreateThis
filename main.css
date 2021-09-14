@@ -149,3 +149,40 @@ main {
     display: flex;
     justify-content: space-between;
 }
+
+.ingTitle {
+    font-size: 25px;
+}
+
+.serving {
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 8px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.directions {
+    border-radius: 25px;
+    width: 80px;
+    height: 20px;
+    border: none;
+    color: black;
+    padding: 15px;
+}
+
+.save {
+    background-color: red;
+    border-radius: 25px;
+    width: 80px;
+    height: 20px;
+    border: none;
+    color: white;
+    padding: 15px;
+}
+
+/*------------------------------------template1-------------------------------------*/
+
