@@ -3,15 +3,6 @@ nav {
     justify-content: space-between;
 }
 
-.title {
-    font-weight: 100;
-    font-size: 2em;
-}
-
-.bold {
-    font-weight: 1000;
-}
-
 /* -------------------- Search bar ---------------------- */
 
 .wrapper {
@@ -51,4 +42,43 @@ nav {
     background-color: white;
 }
 
-/* -------------------------------------------------------------------- */
+/* ----------------------------Title---------------------------------------- */
+
+.title {
+    font-weight: 100;
+    font-size: 2em;
+    margin: 0;
+}
+
+.bold {
+    font-weight: 1000;
+}
+
+/* ------------------------------nav buttons-----------------------------------------------*/
+
+.logIn {
+    background-color: red;
+    border-radius: 25px;
+    width: 80px;
+    height: 20px;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.signUp {
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    width: 80px;
+    height: 20px;
+    border: none;
+    color: black;
+    padding: 15px;
+}
+
+.dropDown {
+    background-color: transparent;
+    border-radius: 50%;
+    
+}
