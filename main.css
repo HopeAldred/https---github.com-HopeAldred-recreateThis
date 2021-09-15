@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 nav {
@@ -13,6 +14,7 @@ nav {
 
 hr {
     margin: 0 0 30px 0;
+    border: 1px solid #F0F0F0;
 }
 
 p {
@@ -21,6 +23,16 @@ p {
 
 h4, h6 {
     margin: 0;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px) {
+    nav {
+        margin: 0;
+    }
+
+    hr {
+        display: none;
+    }
 }
 
 /* -------------------- Search bar ---------------------- */
@@ -32,7 +44,7 @@ h4, h6 {
   }
   
 .search {
-    border: 1px solid grey;
+    border: none;
     border-radius: 5px;
     height: 25px;
     width: 100%;
@@ -62,16 +74,35 @@ h4, h6 {
     background-color: white;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 860px) {
+    .wrapper {
+        max-width: 100px;
+    }
+}
+
 /* ----------------------------Title---------------------------------------- */
 
 .title {
     font-weight: 100;
     font-size: 2em;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.bold {
+.punch{
     font-weight: 1000;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 860px) {
+    .title {
+        font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    }
+
+    .punch {
+        font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    }
 }
 
 /* ------------------------------nav buttons-----------------------------------------------*/
@@ -86,10 +117,9 @@ h4, h6 {
     background-color:#D80000;
     border-radius: 25px;
     width: 80px;
-    height: 20px;
+    height: 30px;
     border: none;
     color: white;
-    padding: 15px;
     margin-right: 10px;
 }
 
@@ -97,10 +127,9 @@ h4, h6 {
     background-color:#E8E8E8;
     border-radius: 25px;
     width: 80px;
-    height: 20px;
+    height: 30px;
     border: none;
     color: black;
-    padding: 15px;
     margin-right: 10px;
 }
 
@@ -111,6 +140,14 @@ h4, h6 {
     font-size: 15px;
     width: 35px;
     height: 35px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 860px) {
+    .logIn, .signUp {
+        width: 50px;
+        height: 20px;
+        font-size: 10px;
+    }
 }
 
 /*---------------------------------main content-------------------------------------*/
@@ -151,7 +188,7 @@ main {
 }
 
 .v1 {
-    border-left: 1px solid grey;
+    border-left: 1px solid#F0F0F0;
     height: 100px;
   }
 
@@ -183,30 +220,42 @@ main {
 
 ul li {
     list-style: none;
+    margin-bottom: 20px;
 }
 
 ul {
     padding-inline-start: 0;
 }
 
+
 .directions {
     background-color: #D3D3D3;
     border-radius: 25px;
     width: 80px;
-    height: 20px;
+    height: 30px;
     border: none;
     color: black;
-    padding: 15px;
 }
 
 .save {
     background-color:#D80000;
     border-radius: 25px;
     width: 80px;
-    height: 20px;
+    height: 30px;
     border: none;
     color: white;
-    padding: 15px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    main {
+        display: block;
+        margin: 20px 20px 0;
+        align-content: center;
+    }
+
+    .recipeBox {
+        margin: 0 30px;
+    }
 }
 
 /*------------------------------------section-------------------------------------*/
@@ -235,6 +284,11 @@ section {
 
 .imgOverlay {
     position: relative;
+    transition: all .2s ease-in;
+}
+
+.imgOverlay:hover {
+    transform: scale(1.05);
 }
 
 .overlay {
@@ -287,6 +341,18 @@ section {
     margin-bottom: 60px;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 1400px) {
+    section {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0 auto;
+    }
+
+    .tempBox {
+        max-width: 100%;
+    }
+}
+
 /*-------------------------------footer--------------------------------------------*/
 
 footer {
@@ -325,4 +391,25 @@ footer {
 
 aside {
     text-align: center;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+    .footerGrid {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .appStore {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 15px;
+        margin: 0 25px;
+    }
+
+    .listOne, .listTwo, .listThree, .listFour {
+        font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+        text-align: center;
+    }
 }
